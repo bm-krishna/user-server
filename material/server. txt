@@ -2,9 +2,65 @@ server:
 
     1.server is a software or piece of programm which accept and process the reqeust over the network made by client.
     2.Client is a machine or peice of program which send a data to server over the network.
+    3.Clients and servers exchange messages(Data) in a request–response messaging pattern. The client sends a request, and the server returns a response.
+    4.By using protocols the client and server can transfer the data. one of the protocol is HTTP.
+HTTP:
+------
+    a.HTTP or HyperText Transfer Protocol is a set of rules that the server needs to follow to transmit all kinds of files like images, text, audio, video, and other kinds over the world wide web (www).
+    b. As mention in point 3 the reqeust-response message pattern will made by using http protocols.
+    c. HTTP uses `methods` to inform the server what actions need to be performed when the client sends a request. It is also called as HTTP `verbs`. Each of these methods performs the operation required and returns success or failure on its completion. 
+    
+    HTTP Request Structure from Client:
+    -----------------------------------
+
+    => HTTP version type
+    => a URL
+    => an HTTP method
+    => HTTP request headers
+    => Optional HTTP body.
+        1. An HTTP Methods 
+            An HTTP method, a verb (like GET, PUT or POST) or a noun (like HEAD or OPTIONS), that describes the action to be performed. 
+            For example, GET indicates that a resource should be fetched or POST means that data is pushed to the server (creating or modifying a resource).
+            The request target, usually a URL, or the absolute path of the protocol, port, and domain are usually characterized by the request context.
+        2. Headers
+            HTTP headers contain text information stored in key-value pairs, and they are included in every HTTP request (and response, more on that later).
+            these headers having information such a Content-Type, Autherization tokes, language etc.
+        3. Http Body:
+            this is Optional for reqest. the body generally contains `info/data` which we need to send over network.
+        
+
+     HTTP Response Structure from Web Server:
+     ----------------------------------------
+        An HTTP response is what web clients (often browsers) receive from an Internet server in answer to an HTTP request. 
+        A typical HTTP response contains:
+
+        => an HTTP status code
+        => HTTP response headers
+        => optional HTTP body
+
+        What’s an HTTP status code?
+            HTTP status codes are 3-digit codes most often used to indicate whether an HTTP request has been successfully completed. Status codes are broken into the following 5 blocks:
+
+            1xx Informational
+            2xx Success
+            3xx Redirection
+            4xx Client Error
+            5xx Server Error
+            The “xx” refers to different numbers between 00 and 99.
+        What are HTTP response headers?
+            Much like an HTTP request, an HTTP response comes with headers that convey important information such as the language and format of the data being sent in the response body.
+            
+            ex: 
+                Content-Type: application/json
+                date: "sun, 07 Feb 2021 18:25:08 GMT
+                status: 200
+        What’s in an HTTP response body?
+            Successful HTTP responses to ‘GET’ requests generally have a body which contains the requested information.
+  
     in node js to create server we have `http` or `https` moduels.
-
     reffer 
-
     https://nodejs.org/en/knowledge/HTTP/servers/how-to-create-a-HTTP-server/
+
+    by using third party node modules also we can create server like `Express`
+
 
