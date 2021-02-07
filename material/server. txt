@@ -1,6 +1,7 @@
 server: 
 
-    server is a software or piece of programm which accept and process the reqeust over the network made by client.
+    1.server is a software or piece of programm which accept and process the reqeust over the network made by client.
+    2.Client is a machine or peice of program which send a data to server over the network.
     in node js to create server we have `http` or `https` moduels.
 
     reffer 
