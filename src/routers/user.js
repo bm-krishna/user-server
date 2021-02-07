@@ -3,12 +3,10 @@ const router = express.Router();
 
 router.get("/info", (req, resp) => {
   return resp.json({
-    message: "this is /user/info resource handler",
+    message: "mobbu mohamaa",
     status: 200,
   });
 });
-
-router.post("/login", loginHandler);
 
 const loginHandler = (req, resp) => {
   const payload = req.body;
@@ -23,5 +21,6 @@ const loginHandler = (req, resp) => {
   });
 };
 
-details.age = 23;
-router.module.exports = router;
+router.post("/login", loginHandler);
+
+module.exports = router;
